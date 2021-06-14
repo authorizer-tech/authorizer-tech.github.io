@@ -1,0 +1,61 @@
+---
+title : Graph of Relations
+---
+
+[Relation tuples](./relation-tuples) can be modeled or represented as an acyclic directed graph of relationships between an [Object](./objects) and a [Subject](./subjects). The graph 
+consists of three types of nodes:
+
+* [Object](./objects) node - These represent objects in the object graph.
+* [SubjectSet](./subjects#subject-sets) node - These represent intermediate relationships between two `(namespace, object, relation)` pairs.
+* [SubjectID](./subjects#subject-id) node - These represent an identifier that uniquely identifies an actor (e.g. an end-user or client app).
+
+Representing relation tuples in this way helps us better
+understand the query time and space complexity used by the internal search algorithm.
+
+## Example
+Consider the following table of relation tuples:
+
+| namespace:object | relation | subject               |
+|------------------|----------|-----------------------|
+| directories:dir1 | view     | user1                 |
+| directories:dir1 | view     | groups:group1#member  |
+| groups:group1    | member   | user2                 |
+| files:file1      | parent   | directories:dir1#...  |
+| files:file1      | view     | directories:dir1#view |
+
+import Mermaid from '@theme/Mermaid';
+
+<Mermaid chart={`
+graph TD
+	subgraph obj [Object nodes]
+		A[dir1] --> |parent| B
+		B[file1]
+		G[group1]
+	end
+	subgraph subjID [SubjectID nodes]
+		D([user1])
+		E([user2])
+	end
+	subgraph subSets [SubjectSet nodes]
+		I{{group1#member}}
+		J{{dir1#view}}
+	end
+	A --> |view| D
+	B --> |view| J
+	I .-> E
+	G --> |member| E
+	J .-> D
+	J --> |view| I
+	B --> |view| I
+	A --> |view| I
+`}/>
+
+Solid edges represent explicit relations, while dotted edges represent relations inherited through a subject set.
+
+## Graph Observations
+A [Check](../../api-reference/check-api) request of the form `Check(namespace:object#relation@subject)` will be evaluated by searching the graph starting at an object and going through it's relations in search for the matching subject. A Check request is allowed if there is such a path.
+
+The algorithm used to traverse the graph is a concurrent breadth-first search. In the worst case this traversal has a time complexity of O(n+e) where n is the number of nodes reachable from the `namespace:object#relation` node through its edges e. The traversal has a space complexity of O(n).
+Typically, both space and time complexity are O(b^d) where b is the maximum breadth and d the maximum depth in the graph search. This means that the complexity heavily depends on
+the structure of the graph. If the graph contains deeply nested indirections, it will require multiple recursive calls to resolve those indirections. If there are widely nested 
+indirections, we can resolve them more concurrently.
