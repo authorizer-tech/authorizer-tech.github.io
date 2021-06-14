@@ -40,6 +40,7 @@ jobs:
           USE_SSH: true
           GIT_USER: git
         run: |
+          export DEPLOYMENT_BRANCH=gh-pages
           git config --global user.email "jon.b.whitaker@gmail.com"
           git config --global user.name "jon-whit"
           if [ -e yarn.lock ]; then
