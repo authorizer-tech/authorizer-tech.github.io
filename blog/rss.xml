@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>authorizer.tech Blog</title>
+        <title>authorizer Blog</title>
         <link>https://authorizer-tech.github.io/blog</link>
-        <description>authorizer.tech Blog</description>
-        <lastBuildDate>Mon, 14 Jun 2021 02:36:44 GMT</lastBuildDate>
+        <description>authorizer Blog</description>
+        <lastBuildDate>Mon, 14 Jun 2021 04:12:25 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[My First Post]]></title>
             <link>https://authorizer-tech.github.io/blog/slug1</link>
             <guid>slug1</guid>
-            <pubDate>Mon, 14 Jun 2021 02:36:44 GMT</pubDate>
+            <pubDate>Mon, 14 Jun 2021 04:12:25 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></description>
         </item>
     </channel>
