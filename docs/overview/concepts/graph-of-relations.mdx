@@ -53,7 +53,7 @@ graph TD
 Solid edges represent explicit relations, while dotted edges represent relations inherited through a subject set.
 
 ## Graph Observations
-A [Check](../../api-reference/check-api) request of the form `Check(namespace:object#relation@subject)` will be evaluated by searching the graph starting at an object and going through it's relations in search for the matching subject. A Check request is allowed if there is such a path.
+A [Check](../../api-reference/check-service#check) request of the form `Check(namespace:object#relation@subject)` will be evaluated by searching the graph starting at an object and going through it's relations in search for the matching subject. A Check request is allowed if there is such a path.
 
 The algorithm used to traverse the graph is a concurrent breadth-first search. In the worst case this traversal has a time complexity of O(n+e) where n is the number of nodes reachable from the `namespace:object#relation` node through its edges e. The traversal has a space complexity of O(n).
 Typically, both space and time complexity are O(b^d) where b is the maximum breadth and d the maximum depth in the graph search. This means that the complexity heavily depends on

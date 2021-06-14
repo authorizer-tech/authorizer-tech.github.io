@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'authorizer.tech',
+  title: 'authorizer',
   tagline: `A scalable, flexible, and fast application permission management platform.`,
   url: 'https://authorizer-tech.github.io',
   baseUrl: '/',

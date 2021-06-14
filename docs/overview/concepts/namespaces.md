@@ -13,7 +13,7 @@ Each namespace has its own storage table in the database which allows storage sp
 Although namespaces are distributed across tables, their query space is _not_ isolated. Objects and relations within a namespace are scoped to that namespace, but [subject sets](./subjects#subject-sets) can reference across namespaces. For example, the relation tuple `files:file1#viewer@groups:group1#member` relates an object in the 'files' namespace to members of 'group1' in the 'groups' namespace.
 
 ## Relation Configs 
-A namespace relation configuration must define one or more relations, which is an application-defined string (e.g. 'viewer' or 'editor') and an optional [subject set rewrite](./namespaces#subject-set-rewrites) configuration. For more information, refer to the [WriteConfig API](../../api-reference/writeconfig-api) documentation.
+A namespace relation configuration must define one or more relations, which is an application-defined string (e.g. 'viewer' or 'editor') and an optional [subject set rewrite](./namespaces#subject-set-rewrites) configuration. For more information, refer to the [NamespaceConfigService API](../../api-reference/nsconfig-service) documentation.
 
 ### Subject Set Rewrites
 Subject set rewrite rules are defined per relation within a namespace. 

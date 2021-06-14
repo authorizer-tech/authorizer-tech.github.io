@@ -5,7 +5,6 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Flexible Permission Models',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
         ABAC, RBAC, and ACL permission models are all supported. Hierarchical
@@ -15,7 +14,6 @@ const FeatureList = [
   },
   {
     title: 'Built to Scale',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
         Inspired by Google Zanzibar - "Google's Consistent, Global Authorization System", the authorizer platform
@@ -25,11 +23,11 @@ const FeatureList = [
   },
   {
     title: 'High Performance',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        The platform is optimized to reduce tail latency and is capable of supporting a 99th percentile
-        latency SLA of 120ms or less. See the Performance page in the docs for more info.
+        The platform is optimized to reduce tail latency with a variety of clever tricks. The
+        goal is to support a 99th percentile latency SLA of 120ms or less. See the 
+        <a href="./docs/performance"> Performance</a> documentation for more info.
       </>
     ),
   },
@@ -38,9 +36,6 @@ const FeatureList = [
 function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>

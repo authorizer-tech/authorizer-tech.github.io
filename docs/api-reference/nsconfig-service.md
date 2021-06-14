@@ -1,0 +1,7 @@
+---
+title: "NamespaceConfigService"
+---
+
+## WriteConfig
+
+## ReadConfig
