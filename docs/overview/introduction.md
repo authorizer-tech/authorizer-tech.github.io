@@ -18,9 +18,9 @@ To get started integrating your application with the authorizer platform, checko
 
 * [Getting Started](../getting-started/getting-started-intro)
 * [Examples](./examples/examples-intro)
-* [API Reference](./api-reference)
+* [API Reference](../api-reference/overview)
 
 If you'd like to learn more about the design and concepts of the authorizer platform check out these resources:
 
 * [Architecture](./architecture)
-* [Concepts](./concepts)
+* [Concepts](./concepts/concepts-intro)

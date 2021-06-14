@@ -63,7 +63,7 @@ module.exports = {
           items: [
            {
               label: 'Slack',
-              href: 'authorizer-tech.slack.com',
+              href: 'https://authorizer-tech.slack.com',
             }
           ],
         },
@@ -81,7 +81,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} authorizer.tech`,
+      copyright: `Copyright © ${new Date().getFullYear()}`,
     },
   },
   presets: [
