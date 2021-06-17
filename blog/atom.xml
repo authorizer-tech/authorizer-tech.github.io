@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://authorizer-tech.github.io/blog</id>
     <title>authorizer Blog</title>
-    <updated>2021-06-17T00:38:36.814Z</updated>
+    <updated>2021-06-17T02:31:44.384Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://authorizer-tech.github.io/blog"/>
     <subtitle>authorizer Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[My First Post]]></title>
         <id>slug1</id>
         <link href="https://authorizer-tech.github.io/blog/slug1"/>
-        <updated>2021-06-17T00:38:36.814Z</updated>
+        <updated>2021-06-17T02:31:44.384Z</updated>
         <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
     </entry>
 </feed>
