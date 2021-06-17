@@ -1,0 +1,27 @@
+---
+title: "Add a Namespace Configuration"
+sidebar_position: 1
+---
+
+The follow code snippet(s) show how to introduce a new [namespace](../overview/concepts/namespaces) configuration.
+
+
+```sh
+grpcurl -plaintext -d \
+'{
+    "config": {
+        "name": "groups",
+        "relations": [
+            {"name": "member"}
+        ]
+    }
+ }' localhost:50052 authorizer.accesscontroller.v1alpha1.NamespaceConfigService.WriteConfig
+```
+
+Verify it was written by reading it back.
+
+```sh
+grpcurl -plaintext -d '{"namespace": "groups"}' localhost:50052 authorizer.accesscontroller.v1alpha1.NamespaceConfigService.ReadConfig
+```
+
+For more information on the API endpoint take a look at the [API Reference](../api-reference/nsconfig-service).
