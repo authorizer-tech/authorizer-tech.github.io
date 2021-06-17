@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'authorizer',
-  tagline: `A scalable, flexible, and fast application permission management platform.`,
+  tagline: `The scalable, flexible, and fast application permission management platform.`,
   url: 'https://authorizer-tech.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
