@@ -18,19 +18,17 @@ Before proceeding, make sure you're familiar with the notation used to define [r
 
 To model the described RBAC API example above with the Authorizer platform, we can define the following relation tuples:
 
-```
-1. projects:/projects#projects.create@permissions:projects.create#member
-2. projects:/projects/1#tasks.create@permissions:tasks.create#member
-
-3. permissions:projects.create#member@roles:project-manager#member
-4. permissions:tasks.create#member@roles:project-manager#member
-
-5. roles:project-manager#member@jim@example.com
-```
+| namespace:object            | relation        | subject                            |
+|-----------------------------|-----------------|------------------------------------|
+| projects:/projects          | projects.create | permissions:projects.create#member |
+| projects:/projects/1        | tasks.create    | permissions:tasks.create#member    |
+| permissions:projects.create | member          | roles:project-manager#member       |
+| permissions:tasks.create    | member          | roles:project-manager#member       |
+| roles:project-manager       | member          | jim@example.com                    |
 
 The relation tuples above give 'jim@example.com' the 'Projet Manager' role, which includes the permissions 'projects.create' and 'tasks.create'. Any subject who has the 'projects.create' and 'tasks.create' permissions can create a new project and add a task to an existing project, respectively.
 
-This relation tuple model allows us to define the relationships between roles and their permissions independently of the relationships between a resource and the subject(s) who have access to the resource. Suppose we want to change the permissions included in the 'Project Manager' role, then all we have to do is mutate the permission-to-role relations defined on lines 3-4. Doing so leaves the relations for the resources unchanged (lines 1-2).
+This relation tuple model allows us to define the relationships between roles and their permissions independently of the relationships between a resource and the subject(s) who have access to the resource. Suppose we want to change the permissions included in the 'Project Manager' role, then all we have to do is mutate the permission-to-role relations defined on rows 3-4. Doing so leaves the relations for the resources unchanged (rows 1-2).
 
 For an in-code demonstration of this example, please take a look at our official [authorizer-examples](https://github.com/authorizer-tech/authorizer-examples) repository.
 
