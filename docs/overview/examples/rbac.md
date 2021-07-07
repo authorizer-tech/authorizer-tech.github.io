@@ -1,9 +1,11 @@
 
 # RBAC
 
-Role-based Accss Control (RBAC) is one of many kinds of access-control models that can be used to enforce access to a particular resource. In an RBAC model a role is composed of a collection of permissions and you grant the role to a subject/user. The permissions determine what operations are allowed on a resource, but roles group or aggregate them. Using roles makes it easier to add, remove, and adjust permissions than assigning permissions to subjects individually. RBAC models can be extremely powerful from a permission-management perspective because they decouple (via a role) the assignment of permissions for a resource and the list of subjects who have the access.
+Role-based Accss Control (RBAC) is one of many kinds of access-control models that can be used to enforce access to a particular resource. In an RBAC model a role is composed of a collection of permissions and you grant the role to a subject/user. The permissions determine what operations are allowed on a resource, but roles group or aggregate them. Using roles makes it easier to add, remove, and adjust permissions than assigning permissions to subjects individually. RBAC models can be extremely powerful from a permission-management perspective because they decouple (via a role) the assignment of permissions for a resource and the list of subjects who have the access. You can use roles to define the collection of permissions for a specific API or set of APIs (this is what [Google IAM][1] and [AWS IAM][2] have done).
 
-You can use roles to define the collection of permissions for a specific API or set of APIs (this is what [Google IAM][1] and [AWS IAM][2] have done). For example, suppose you're building a project-management platform. The platform allows users to manage projects and tasks within a project. Project managers within an organization are responsible for creating projects and managing the tasks within them. A Projects API has permissions 'projects.create' and 'tasks.create' to create projects and tasks within a project, respectively. 
+----
+
+Suppose you're building a project-management platform. The platform allows users to manage projects and tasks within a project. Project managers within an organization are responsible for creating projects and managing the tasks within them. A Projects API has permissions 'projects.create' and 'tasks.create' to create projects and tasks within a project, respectively.
 
 | Method | Endpoint            | Permission      |
 |--------|---------------------|-----------------|
