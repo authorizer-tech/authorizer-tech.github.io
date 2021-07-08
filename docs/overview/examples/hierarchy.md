@@ -35,9 +35,9 @@ We define two namespace configurations, one for 'projects' and one for 'tasks', 
                 "union": {
                     "children": [
                         {
-                            "tupleToSubjectSet": {
+                            "tupleToSubjectset": {
                                 "tupleset": { "relation": "parent" },
-                                "computedSubjectSet": { "relation": "viewer" }
+                                "computedSubjectset": { "relation": "viewer" }
                             }
                         }
                     ]
