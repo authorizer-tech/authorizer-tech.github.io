@@ -16,7 +16,7 @@ const FeatureList = [
     title: 'Built to Scale',
     description: (
       <>
-        Inspired by Google Zanzibar - "Google's Consistent, Global Authorization System", the authorizer platform
+        Inspired by Google Zanzibar - "Google's Consistent, Global Authorization System", the Authorizer platform
         is built with scale in mind. Learn more about the <a href="./docs/overview/architecture">Architecture</a>.
       </>
     ),

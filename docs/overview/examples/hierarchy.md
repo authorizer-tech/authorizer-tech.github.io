@@ -1,6 +1,6 @@
 
 # Hierarchical Permissions
-The authorizer platform can model a variety of hierarchical relationships. The hierarchy can be defined through [SubjectSet rewrites](../concepts/namespaces#subject-set-rewrites) or
+The Authorizer platform can model a variety of hierarchical relationships. The hierarchy can be defined through [SubjectSet rewrites](../concepts/namespaces#subject-set-rewrites) or
 explicitly via [relation tuples](../concepts/relation-tuples) between two objects or using both. The following example demonstrates using SubjectSet rewrites and parent relationships to model a parent/child hierarchy.
 
 ----
@@ -35,9 +35,9 @@ We define two namespace configurations, one for 'projects' and one for 'tasks', 
                 "union": {
                     "children": [
                         {
-                            "tupleToSubjectSet": {
+                            "tupleToSubjectset": {
                                 "tupleset": { "relation": "parent" },
-                                "computedSubjectSet": { "relation": "viewer" }
+                                "computedSubjectset": { "relation": "viewer" }
                             }
                         }
                     ]
