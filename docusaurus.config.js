@@ -2,13 +2,13 @@
 module.exports = {
   title: 'authorizer',
   tagline: `The scalable, flexible, and fast permission and access-management platform.`,
-  url: 'https://authorizer.tech',
+  url: 'https://authorizer-tech.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'authorizer-tech',
-  projectName: 'authorizer.tech',
+  projectName: 'authorizer-tech.github.io',
   themeConfig: {
     colorMode: {
       switchConfig: {
