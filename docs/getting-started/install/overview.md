@@ -21,4 +21,4 @@ For more information on how to setup the Authorizer platform using any one of th
 [1]: https://github.com/authorizer-tech/access-controller
 [2]: https://github.com/authorizer-tech/access-watcher
 [3]: https://github.com/authorizer-tech/access-indexer
-[4]: https://github.com/authorizer-tech/helm-charts/tree/master/authorizer
+[4]: https://github.com/authorizer-tech/helm-charts/tree/master/charts/authorizer

@@ -29,4 +29,4 @@ grpcurl -plaintext -d \
  }' localhost:50052 authorizer.accesscontroller.v1alpha1.WriteService.WriteRelationTuplesTxn
 ```
 
-For more information on the API endpoint take a look at the [API Reference](../api-reference/write-service).
+For more information on the API endpoint take a look at the [API Reference](../api-reference#writerelationtuplestxn).
