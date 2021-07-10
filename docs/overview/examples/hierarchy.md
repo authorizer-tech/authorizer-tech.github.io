@@ -52,5 +52,5 @@ These namespace configurations express the following policies:
 * Anyone who is a viewer of a project can view the project.
 * Anyone who can view a project can view all tasks under the project.
 
-If we issue a [Check](../../api-reference/check-service#check) request of the form `Check(tasks:task1#viewer@user1)` it'll evaluate parent relationships via SubjectSet rewrites and
+If we issue a [Check](../../api-reference#check) request of the form `Check(tasks:task1#viewer@user1)` it'll evaluate parent relationships via SubjectSet rewrites and
 will return a truthy outcome because project1 is the parent of task1 and project1 has a viewer 'user1'.

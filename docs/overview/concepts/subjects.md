@@ -24,13 +24,11 @@ A subject set defines the set of all subjects that have a specific relation to a
 ### Example
 Consider the following table of relation tuples:
 
-```
 | namespace:object | relation    | subject              |
 |------------------|-------------|----------------------|
 | groups:group0    | member      | user1                |
 | groups:group1    | member      | groups:group0#member |
 | teams:team0      | participant | groups:group1#member |
-```
 
 Using subject sets we create a recursive hierarchical relationship between teams and groups of users. In this example we have expressed the following statement "Anyone who is a member of 'group0' is also a member of 'group1' in the 'groups' namespace, and anyone who is in 'group1' is a participant of 'team0' in the 'teams' namespace.
 

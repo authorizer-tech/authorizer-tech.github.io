@@ -3,7 +3,7 @@ title: "Check a Subject's Access"
 sidebar_position: 3
 ---
 
-In the [prior step](./write-relation-tuple) we granted "subject1" the "member" relation to the "group1" object in the "groups" namespace, if we do an access [Check](../api-reference/check-service#check) we should get an allowed response.
+In the [prior step](./write-relation-tuple) we granted "subject1" the "member" relation to the "group1" object in the "groups" namespace, if we do an access [Check](../api-reference#check) we should get an allowed response.
 
 ```sh
 grpcurl -plaintext -d \
@@ -52,4 +52,4 @@ grpcurl -plaintext -d \
 
 And now you get an empty response `{ }`, which indicates that `allowed` is false.
 
-For more information on the API endpoint take a look at the [API Reference](../api-reference/check-service).
+For more information on the API endpoint take a look at the [API Reference](../api-reference#check).

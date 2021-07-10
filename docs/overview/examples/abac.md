@@ -16,7 +16,7 @@ Suppose that you're building an HR management platform. Your platform wants to e
 Before proceeding, make sure you're familiar with the notation used to define [relation tuples](../concepts/relation-tuples).
 :::
 
-The application could write, using the [WriteService API](../../api-reference/write-service), a [relation tuple](../concepts/relation-tuples) that uses an [object](../concepts/objects) identifier that is computed by generating a v5 UUID with the desired attributes that define the access policy described above. For example,
+The application could write, using the [WriteService API](../../api-reference#writeservice), a [relation tuple](../concepts/relation-tuples) that uses an [object](../concepts/objects) identifier that is computed by generating a v5 UUID with the desired attributes that define the access policy described above. For example,
 
 ```
 type AccessAttributes struct {
