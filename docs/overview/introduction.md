@@ -4,8 +4,7 @@ sidebar_position: 0
 ---
 :::note **This documentation is under active development!**
 
-Please forgive the missing content in various locations. The goal is to have the content herein
-fully specified and polished by the end of July 2021. Keep an eye out for updates :eyes:!
+Please forgive the missing content in various locations. This project is under active development and is evolving rapidly. Keep an eye out for updates :eyes:!
 :::
 
 The Authorizer platform is a distributed, highly-scalable, and high performance platform for permission and access management. It stores permissions and serves authorization queries based on stored permissions. It supports a variety of models including: attribute-based access control (ABAC), role-based access control (RBAC), access control lists (ACLs), and other custom models. The design of the Authorizer platform is inspired by the design of [Google Zanzibar - "Google’s Consistent, Global Authorization System"](https://research.google/pubs/pub48190/).
